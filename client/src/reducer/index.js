@@ -3,6 +3,7 @@ import {
   GET_SOCIAL,
   GET_PH_MILESTONE,
   GET_SO_MILESTONE,
+  MILESTONE_STATUS,
 } from '../Constants/Reducer'
 
 const initialState = {
@@ -10,6 +11,7 @@ const initialState = {
   social:[],
   phMilestone:[],
   soMilestone: [],
+  milestoneStatus: {},
 };
 
 
@@ -34,6 +36,11 @@ function rootReducer (state = initialState, action){
       return {
         ...state, 
         soMilestone: action.payload
+      };
+    case MILESTONE_STATUS:
+      return {
+        ...state,
+        milestoneStatus: {...state.milestoneStatus, [action.id]:action.payload, [action.areaId]:action.payload}
       }
     default:
       return state;

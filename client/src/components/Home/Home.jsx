@@ -112,6 +112,7 @@ export default function Physical() {
                     title={e.title}
                     id={e.id}
                     age_range={area.age_range}
+                    areaId={e.areaId}
                     />
                 </div>
                 )

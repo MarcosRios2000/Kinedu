@@ -4,6 +4,7 @@ import {
   GET_SOCIAL,
   GET_PH_MILESTONE,
   GET_SO_MILESTONE,
+  MILESTONE_STATUS,
 } from '../Constants/Reducer'
 
 export function getPhysical() {
@@ -56,4 +57,12 @@ export function patchMilestone(payload, id) {
   };
 }
 
+export function milestoneStatus(id, status, areaId) {
+  return async function (dispatch){
+    return dispatch({
+      type: MILESTONE_STATUS,
+      payload: {id, status, areaId},
+    }); 
+  }
+}
 
