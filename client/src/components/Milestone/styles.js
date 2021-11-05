@@ -9,14 +9,25 @@ export const useStyles = makeStyles({
         fontFamily: 'Proxima Nova',
         fontStyle: 'normal',
         fontWeight: 'normal',
+        margin: '30px',
+        
     }, 
+    title: {
+        fontFamily: 'Proxima Nova',
+        fontStyle: 'normal',
+        fontWeight: 'normal', 
+        color: '#657480'
+    },
     age: {
         fontFamily: 'Proxima Nova',
         fontStyle: 'normal',
-        fontWeight: 'normal',   
+        fontWeight: 'normal',  
+        display: 'flex',
+        color: '#8295A3',
+        fontSize: '14px', 
     },
     btn: {
-        display: 'flex',
-        justifyContent: 'flex-start',
+        position: 'absolute',
+        left: 'calc(50% - 140px/2 + 328px)',
     },
 });
